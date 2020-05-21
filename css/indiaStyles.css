@@ -84,9 +84,9 @@ section{
     padding-bottom: 10px;
     border-bottom: 1px solid black;
 }
-#datediv{
+/* #datediv{
     display: none;
-}
+} */
 #message div p{
     margin: 5px;
 }

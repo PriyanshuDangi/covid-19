@@ -92,11 +92,21 @@ function india(){
     districtInput.style.display = "none"
     section.style.display = "none"
     fetch('https://api.covid19india.org/data.json').then((response)=>{
-    response.json().then((data=>{
-        console.log(data.cases_time_series.splice(-1)[0])
-        var data = data.cases_time_series.splice(-1)[0];
+    response.json().then((indiadata)=>{
+        // console.log(data.cases_time_series.splice(-1)[0])
+        // var data = data.cases_time_series.splice(-1)[0];
+        // console.log(data)
+        // var hey = indiadata.cases_time_series
+        // console.log(indiadata.cases_time_series)
+        var data = indiadata.cases_time_series[indiadata.cases_time_series.length - 1]
+        // var fulldata = indiadata.cases_time_series[111]
+        console.log(data)
+        // console.log(fulldata)
             // error.textContent = ""
+
             loading.textContent = 'Last Updated:' + data.date
+            // loading.textContent = ''
+            // document.getElementById('dateSpan').textContent = data.Date
             messageOne.textContent = data.totalconfirmed;
             messageTwo.textContent = data.totaldeceased;
             messageThree.textContent = data.totalrecovered;
@@ -105,6 +115,6 @@ function india(){
             messageSix.textContent = data.dailyrecovered;
             section.style.display = "block";
             // dateDiv.style.display = "block";
-    }))
+    })
     })
 }
