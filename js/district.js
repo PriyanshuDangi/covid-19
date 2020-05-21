@@ -87,7 +87,7 @@ function india(){
             messageTwo.textContent = data.deaths;
             messageThree.textContent = data.recovered;
             messageFour.textContent = data.deltaconfirmed;
-            messageFive.textContent = data.deltadeceased;
+            messageFive.textContent = data.deltadeaths;
             messageSix.textContent = data.deltarecovered;
             section.style.display = "block";
     })
