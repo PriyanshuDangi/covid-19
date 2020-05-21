@@ -58,7 +58,7 @@ statesDropdown.addEventListener('change', ()=>{
     districts = Object.keys(wholeData[statesDropdown.value].districtData)
     districtsData = wholeData[statesDropdown.value].districtData
 
-    districtHTML = '<select name="districts" id="districts">'
+    districtHTML = '<label>District:  </label><select name="districts" id="districts">'
     let p;
     for(p=0; p<districts.length; p++){
         districtHTML += `<option value = "${districts[p]}">${districts[p]}</option>`
